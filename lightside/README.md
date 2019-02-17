@@ -1,4 +1,4 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/25574701/43054027-a1e80e52-8e6a-11e8-989c-7132c217335b.png" alt="lightside"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/25574701/52907593-d2425300-32a7-11e9-8dd9-e1a243bdf8ec.png" alt="lightside"></p>
 
 ## 使い方
 
