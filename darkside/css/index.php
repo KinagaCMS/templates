@@ -60,6 +60,7 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'), '
 .popover{max-width:70%}
 .similar-article{height:2rem}
 .sticky-top{top:10px}
+.text-light{color:'. ($color ? hsla($color, -5, +20, .9) : 'inherit'). ' !Important}
 .wrap,.mfp-title,.popover-body{word-wrap:break-word;white-space:pre-wrap}
 @media(max-width:767px){.card-columns{column-count:1}}
 a:hover,a:hover img,a:hover svg,.social:hover{opacity:0.8}
