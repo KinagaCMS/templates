@@ -59,6 +59,7 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'),'
 .popover{max-width:70%}
 .similar-article{height:2rem}
 .sticky-top{top:10px}
+.text-light{color:'. ($color ? hsla($color, -5, +20, .9) : 'inherit'). ' !Important}
 .title{color:white}
 .wrap,.mfp-title,.popover-body{word-wrap:break-word;white-space:pre-wrap}
 ::-moz-selection,.highlight,.comment:target{background-color:#d9edf7;color:#31708f}
@@ -82,8 +83,7 @@ url{margin:1em auto;width:95%;display:table;font-size:small;padding:1em}
 @media(max-width:767px){.card-columns{column-count:1}#address,#recents,#popular-articles,#recent-comments,#informations{width:100%}}
 ';
 
-if ($use_auto_wrap === true)
-	echo '
+if ($use_auto_wrap === true) echo '
 .article,.card-text
 {word-wrap:break-word;white-space:pre-wrap}
 .article h1,.article h2,.article h3,.article h4,.article h5,.article h6{margin-bottom:0}
