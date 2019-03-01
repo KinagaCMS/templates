@@ -42,6 +42,7 @@ aside div[class="card mb-5"],aside div[class="list-group mb-5"]{column-count:2;m
 #page-top{bottom:3.1em;position:fixed;right:2em;display:none;z-index:10}
 .article{font-size:large;line-height:1.8}
 .article h1,.article h2,.article h3,.article h4,.article h5,.article h6{margin-bottom:0;border-bottom:thin dotted}
+.badge-light{background-color:#f8f9fa}
 .bg-danger.text-danger{background-color:#f2dede!important;color:#a94442!important}
 .bg-info.text-info{background-color:#d9edf7!important;color:#31708f!important}
 .bg-success.text-success{background-color:#dff0d8!important;color:#3c763d!important}
