@@ -24,7 +24,7 @@
 		<ol class="breadcrumb small"><?=$breadcrumb?></ol>
 		<?=$article?>
 		<aside class="card-columns"><?=$aside?></aside>
-		<footer class="text-center mt-lg-5">
+		<footer class="text-center mt-5">
 			<a href="#TOP" id=page-top class="btn btn-outline-primary">&uarr;</a>
 			<script src="<?=$js?>"></script>
 			<?=$footer?>
