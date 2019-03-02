@@ -20,7 +20,7 @@
 </header>
 <div class=container><?=$article?></div>
 <aside class="container-fluid d-flex flex-wrap flex-column flex-md-row justify-content-around bg-primary text-white pt-5"><?=$aside?></aside>
-<footer class="text-center bg-primary text-white">
+<footer class="text-center bg-primary text-white pb-3">
 <a href="#TOP" id=page-top class="btn btn-outline-primary">&uarr;</a>
 <script src="<?=$js?>"></script>
 <?=$footer?>
