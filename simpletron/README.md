@@ -1,4 +1,4 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/25574701/53858437-8fa9a600-401d-11e9-84ee-e0d9333c8a2c.png" alt="Simpletron"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/25574701/53858768-b61c1100-401e-11e9-9a86-d61f986f3265.png" alt="Simpletron"></p>
 
 ## 使い方
 
