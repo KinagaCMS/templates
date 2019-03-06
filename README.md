@@ -18,7 +18,7 @@ https://github.com/KinagaCMS/templates/archive/master.zip
     cd 保存先
     svn export https://github.com/KinagaCMS/templates/trunk/テンプレート名
 
-### 端末からの一括インストール    
+### 一括インストール    
     cd 保存先
     git clone https://github.com/KinagaCMS/templates/
 
