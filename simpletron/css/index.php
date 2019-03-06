@@ -41,7 +41,8 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'),'
 #informations{order:5}
 #page-top{bottom:1em;position:fixed;right:2em;display:none;z-index:10}
 .article{font-size:large;line-height:1.8}
-.article h1,.article h2,.article h3,.article h4,.article h5,.article h6{margin-bottom:0;border-bottom:thin dotted}
+.article h1,.article h2,.article h3,.article h4,.article h5,.article h6,.current{margin-bottom:0;border-bottom:thin dotted}
+.badge-light{background-color:#f8f9fa}
 .bg-danger.text-danger{background-color:#f2dede!important;color:#a94442!important}
 .bg-info.text-info{background-color:#d9edf7!important;color:#31708f!important}
 .bg-success.text-success{background-color:#dff0d8!important;color:#3c763d!important}
@@ -59,16 +60,19 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'),'
 .popover{max-width:70%}
 .similar-article{height:2rem}
 .sticky-top{top:10px}
-.title{color:white}
+.text-light{color:'. ($color ? hsla($color, -5, +20, .9) : 'inherit'). ' !Important}
+
 .wrap,.mfp-title,.popover-body{word-wrap:break-word;white-space:pre-wrap}
 ::-moz-selection,.highlight,.comment:target{background-color:#d9edf7;color:#31708f}
 ::selection,.highlight,.comment:target{background-color:#d9edf7;color:#31708f}
 #page-top{border-color:white!important}
 a:hover img,a:hover svg,.social:hover{opacity:0.8}
-aside a.list-group-item,aside div.list-group-item{color:inherit;background-color:inherit!important;border:0;padding-left:0;padding-right:0}
-aside a.list-group-item-action:hover:hover{background-color:inherit!important}
-aside div.title,aside div.list-group-item-primary,footer span.text-muted,#page-top{color:white!important}
-aside div.title{border-bottom:thin solid white!important}
+
+aside a{color:inherit;display:block;padding-top:1em}
+aside a:hover{color:inherit}
+aside h5,footer span.text-muted,#page-top{color:white!important}
+aside h5{border-bottom:thin solid white!important}
+
 body{color:#555}
 lastmod:before{color:lightskyblue;content:"\25F7\0020";font-size:large}
 lastmod{display:table-cell;text-align:right;white-space:nowrap}
@@ -79,11 +83,12 @@ url:hover{background-color:whitesmoke;color:darkgray}
 urlset:before{border-bottom:thick solid dimgray;margin:1em;text-align:center;font-size:xx-large;display:block;content:"Sitemap of '. $server. '";padding-bottom:1em}
 urlset{background-repeat: no-repeat; background:linear-gradient(to left,white,whitesmoke);color:dimgray}
 url{margin:1em auto;width:95%;display:table;font-size:small;padding:1em}
-@media(max-width:767px){.card-columns{column-count:1}#address,#recents,#popular-articles,#recent-comments,#informations{width:100%}}
+#search{background-color:rgba(255,255,255,.5);text-align:center;margin:0 auto;transition:1s;width:40%}
+#search:hover,#search:focus{background-color:white}
+@media(max-width:767px){.card-columns{column-count:1}#address,#recents,#popular-articles,#recent-comments,#informations,#search{width:100%}}
 ';
 
-if ($use_auto_wrap === true)
-	echo '
+if ($use_auto_wrap === true) echo '
 .article,.card-text
 {word-wrap:break-word;white-space:pre-wrap}
 .article h1,.article h2,.article h3,.article h4,.article h5,.article h6{margin-bottom:0}
@@ -115,7 +120,7 @@ if ($use_auto_wrap === true)
 else echo '.page-top{padding-top:2rem!important;margin-bottom:2rem!important}';
 
 if ($color) echo '
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{background-color:'. hsla($color, 0, 0, .05). ';border-color:#dee2e6 #dee2e6 inherit!important}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{background-color:'. hsla($color, 0, 0, .05). '}
 ::selection, .highlight, .comment:target{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}
 ::-moz-selection, .highlight, .comment:target{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}
 ';

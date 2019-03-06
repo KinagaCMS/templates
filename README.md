@@ -1,13 +1,24 @@
+
+## ダウンロードとインストール方法
+
 紀永（KinagaCMS）のテンプレートです。
-以下の方法でダウンロードできます。
+以下の方法でダウンロードとインストールができます。
 
-## ダウンロード
-### 一括
-https://github.com/KinagaCMS/Templates/releases
+### 圧縮ファイル
 
-### 個別
+https://github.com/KinagaCMS/templates/archive/master.zip
+
+ファイルを展開し、フォルダのパーミッションを適宜変更してから /templates にアップロードして下さい。
+
+### 端末からの個別インストール
+
 端末で下記コマンドを実行して下さい。
 
     sudo apt-get install subversion
     cd 保存先
-    svn export https://github.com/KinagaCMS/Templates/trunk/テンプレート名
+    svn export https://github.com/KinagaCMS/templates/trunk/テンプレート名
+
+### 端末からの一括インストール    
+    cd 保存先
+    git clone https://github.com/KinagaCMS/templates/
+

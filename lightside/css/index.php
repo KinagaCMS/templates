@@ -39,6 +39,7 @@ if (filter_input(INPUT_SERVER, 'HTTP_IF_MODIFIED_SINCE') === $last_modified) hea
 echo $bootstrap, file_get_contents('magnific-popup.min.css'), file_get_contents('simple-sidebar.css'), '
 #page-top{bottom:1em;position:fixed;right:2em;display:none;z-index:10}
 .article{font-size:large;line-height:1.8}
+.badge-light{background-color:#f8f9fa}
 .bg-danger.text-danger{background-color:#f2dede!important;color:#a94442!important}
 .bg-info.text-info{background-color:#d9edf7!important;color:#31708f!important}
 .bg-success.text-success{background-color:#dff0d8!important;color:#3c763d!important}
@@ -57,6 +58,7 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'), file_get_contents(
 .popover{max-width:70%}
 .similar-article{height:2rem}
 .sticky-top{top:10px}
+.text-light{color:'. ($color ? hsla($color, -5, +20, .9) : 'inherit'). ' !Important}
 .wrap,.mfp-title,.popover-body{word-wrap:break-word;white-space:pre-wrap}
 ::-moz-selection,.highlight,.comment:target{background-color:#d9edf7;color:#31708f}
 ::selection,.highlight,.comment:target{background-color:#d9edf7;color:#31708f}
@@ -114,7 +116,7 @@ else echo '.page-top{padding-top:2rem!important;margin-bottom:2rem!important}';
 
 if ($color) echo '
 #category a:hover,#category a.active,aside a.bg-light{color:'. hsla($color, -5, -5). '}
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{background-color:'. hsla($color, 0, 0, .05). ';border-color:#dee2e6 #dee2e6 inherit!important}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{background-color:'. hsla($color, 0, 0, .05). '}
 ::selection, .highlight, .comment:target{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}
 ::-moz-selection, .highlight, .comment:target{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}
 ';

@@ -1,4 +1,4 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/25574701/43054027-a1e80e52-8e6a-11e8-989c-7132c217335b.png" alt="Simpletron"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/25574701/53858768-b61c1100-401e-11e9-9a86-d61f986f3265.png" alt="Simpletron"></p>
 
 ## 使い方
 
@@ -8,4 +8,6 @@
 
 3. 色を変更する場合は、/includes/lang/ja.php をテキストエディタで開き、$color = '緑'; などに変更して保存。
 
-4. また、/images フォルダに header.jpg があれば、ジャンボトロンの背景画像として表示されます。
+4. /images フォルダに header.jpg があれば、ジャンボトロンの背景画像として表示されます。
+
+5. /images フォルダに logo.png があれば、ジャンボトロンのサイト名がロゴに変わります。

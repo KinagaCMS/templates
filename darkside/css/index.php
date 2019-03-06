@@ -39,6 +39,7 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'), '
 #category a:hover,#category a.active,aside a.bg-light{color:white;text-shadow:0px 0px 1px white}
 #page-top{bottom:1em;position:fixed;right:2em;display:none;z-index:10}
 .article{font-size:large;line-height:1.8}
+.badge-light{background-color:#f8f9fa}
 .bg-danger.text-danger{background-color:#f2dede!important;color:#a94442!important}
 .bg-info.text-info{background-color:#d9edf7!important;color:#31708f!important}
 .bg-success.text-success{background-color:#dff0d8!important;color:#3c763d!important}
@@ -60,6 +61,7 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'), '
 .popover{max-width:70%}
 .similar-article{height:2rem}
 .sticky-top{top:10px}
+.text-light{color:'. ($color ? hsla($color, -5, +20, .9) : 'inherit'). ' !Important}
 .wrap,.mfp-title,.popover-body{word-wrap:break-word;white-space:pre-wrap}
 @media(max-width:767px){.card-columns{column-count:1}}
 a:hover,a:hover img,a:hover svg,.social:hover{opacity:0.8}
