@@ -13,13 +13,16 @@
 <ol class="breadcrumb rounded-0 bg-dark border-bottom border-black"><?=$breadcrumb?></ol>
 <div class=p-4><?=$article?></div>
 </div>
-<aside class="col-lg-4 pb-5 border-left border-black">
-<div class=text-center>
-<a href="<?=$url?>"><img src="<?=$url?>images/icon.php" alt="" width=250><span class="d-block h1 m-4"><?=$site_name?></span></a>
+<aside class="col-lg-4 border-left border-black p-0 pb-5">
+<div class="mt-4 text-center">
+<a href="<?=$url?>">
+<img src="<?=$url?>images/icon.php" alt="" width=250>
+<h1 class=my-4><?=$site_name?></h1>
+</a>
 </div>
 <div class="d-block p-5"><?=$search?></div>
-<div id=category class=pb-4>
-<div class="p-3 title border-0"><?=$category?></div>
+<div id=category class="mb-4 px-4">
+<h5><?=$category?></h5>
 <ul class=list-unstyled><?=$nav?></ul>
 </div>
 <?=$aside?>
@@ -27,7 +30,7 @@
 </div>
 </div>
 <footer class="text-center p-4 border-top border-black">
-<a href="#TOP" id=page-top class="btn btn-outline-primary">&uarr;</a>
+<a href="#TOP" id=page-top class="btn btn-outline-info"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="1em"><path  fill="currentColor" d="m2.5872 45.447-2.5872-2.043 24.034-40.851 23.966 40.987-2.996 1.362-21.038-35.745z"/></svg></a>
 <script src="<?=$js?>"></script>
 <?=$footer?>
 </footer>
