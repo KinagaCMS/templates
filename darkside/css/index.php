@@ -36,7 +36,6 @@ if ($color)
 	$bootstrap = str_replace(array('#7abaff', '#80bdff', '#005cbf'), hsla($color, 0, 20), $bootstrap);
 }
 echo $bootstrap, file_get_contents('magnific-popup.min.css'), '
-#category a:hover,#category a.active,aside a.bg-light{color:white;text-shadow:0px 0px 1px white}
 #page-top{bottom:1em;position:fixed;right:2em;display:none;z-index:10}
 .article{font-size:large;line-height:1.8}
 .badge-light{background-color:#f8f9fa}
@@ -65,10 +64,8 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'), '
 .wrap,.mfp-title,.popover-body{word-wrap:break-word;white-space:pre-wrap}
 @media(max-width:767px){.card-columns{column-count:1}}
 a:hover,a:hover img,a:hover svg,.social:hover{opacity:0.8}
-aside .list-group-item, aside .list-group-item-primary,aside .bg-primary{background-color:inherit!important;border:none;color:inherit}
-aside a.bg-light:hover{background-color:inherit!important}
-aside div:first-child{font-size:large}
-aside div{border-top:1px solid rgba(0,0,0,.1);padding-top:2em}
+aside a:hover,aside a.active{color:white;text-shadow:0px 0px 1px white}
+aside div:not(:first-child){border-top:1px solid #222;padding-top:2em}
 a{color:white}
 div{min-width:0}
 lastmod:before{color:lightskyblue;content:"\25F7\0020";font-size:large}
