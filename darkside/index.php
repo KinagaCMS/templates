@@ -13,20 +13,7 @@
 <ol class="breadcrumb rounded-0 bg-dark border-bottom border-black"><?=$breadcrumb?></ol>
 <div class=p-4><?=$article?></div>
 </div>
-<aside class="col-lg-4 border-left border-black p-0 pb-5">
-<div class="mt-4 text-center">
-<a href="<?=$url?>">
-<img src="<?=$url?>images/icon.php" alt="" width=250>
-<h1 class=my-4><?=$site_name?></h1>
-</a>
-</div>
-<div class="d-block p-5"><?=$search?></div>
-<div id=category class="mb-4 px-4">
-<h5><?=$category?></h5>
-<ul class=list-unstyled><?=$nav?></ul>
-</div>
-<?=$aside?>
-</aside>
+<aside class="col-lg-4 border-left border-black p-0"><?=$aside?></aside>
 </div>
 </div>
 <footer class="text-center p-4 border-top border-black">
