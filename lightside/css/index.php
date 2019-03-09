@@ -64,10 +64,7 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'), file_get_contents(
 ::selection,.highlight,.comment:target{background-color:#d9edf7;color:#31708f}
 @media(max-width:767px){.card-columns{column-count:1}}
 a:hover img,a:hover svg,.social:hover{opacity:0.8}
-aside .list-group-item, aside .list-group-item-primary,aside .bg-primary{background-color:inherit!important;border:none;color:inherit}
-aside a.bg-light:hover{background-color:inherit!important}
-aside div a{color:inherit}
-aside div:first-child{border-top:none;font-size:large}
+aside a{color:inherit}
 aside div{border-top:1px solid rgba(0,0,0,.1);padding-top:2em}
 body{color:#888}
 div{min-width:0}
