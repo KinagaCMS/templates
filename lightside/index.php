@@ -9,9 +9,6 @@
 <body id=TOP>
 <div class="d-flex" id="wrapper">
 <aside id=sidebar-wrapper class="bg-light pb-5">
-<div class="text-center"><a href="<?=$url?>"><img src="<?=$url?>images/icon.php" alt="" width=250><span class="d-block h1 m-4"><?=$site_name?></span></a></div>
-<div class="d-block p-5"><?=$search?></div>
-<div id=category  class=pb-4><div class="p-3 title border-0"><?=$category?></div><ul class=list-unstyled><?=$nav?></ul></div>
 <?=$aside?>
 </aside>
 <div class="container-fluid pb-5 p-0">
@@ -23,7 +20,7 @@
 </div>
 </div>
 <footer class="text-center bg-light p-4">
-<a href="#TOP" id=page-top class="btn btn-outline-primary">&uarr;</a>
+<a href="#TOP" id=page-top class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="1em"><path  fill="currentColor" d="m2.5872 45.447-2.5872-2.043 24.034-40.851 23.966 40.987-2.996 1.362-21.038-35.745z"/></svg></a>
 <script src="<?=$js?>"></script>
 <?=$footer?>
 </footer>
