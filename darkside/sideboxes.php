@@ -9,9 +9,11 @@ if ($recent_files || $glob_info_files)
 	'<a href="'. $url. '">'. $n.
 	(!is_file('images/logo.png') ? '<img src="'. $url. 'images/icon.php" alt="" width=250><span class="d-block h1 mt-4">'. $site_name. '</span>' : get_logo()). $n.
 	'</a>'. $n.
-	'</div>'. $n.
-	'<div class="d-block p-5">'. $search. '</div>'. $n;
+	'</div>';
 }
+
+if ($use_search)
+	$aside .='<div class="d-block p-5">'. $search. '</div>'. $n;
 
 if ($recent_files)
 {
