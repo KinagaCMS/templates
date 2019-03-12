@@ -72,6 +72,7 @@ lastmod:before{color:lightskyblue;content:"\25F7\0020";font-size:large}
 lastmod{display:table-cell;text-align:right;white-space:nowrap}
 loc:before{color:skyblue;content:"\25BA\0020";font-size:large}
 loc{display:table-cell}
+pre{color:#ccc}
 time:before{content:"\25F7\0020";font-size:large;vertical-align:0}
 url:hover{background-color:whitesmoke;color:darkgray}
 urlset:before{border-bottom:thick solid dimgray;margin:1em;text-align:center;font-size:xx-large;display:block;content:"Sitemap of '. $server. '";padding-bottom:1em}
