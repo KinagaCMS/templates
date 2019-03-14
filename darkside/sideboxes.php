@@ -7,7 +7,7 @@ if ($recent_files || $glob_info_files)
 	$aside .=
 	'<div class="py-4 text-center">'. $n.
 	'<a href="'. $url. '">'. $n.
-	(!is_file('images/logo.png') ? '<img src="'. $url. 'images/icon.php" alt="" width=250><span class="d-block h1 mt-4">'. $site_name. '</span>' : get_logo()). $n.
+	(!is_file('images/logo.png') ? '<img src="'. $url. 'images/icon.php" alt=logo width=250 height=200><span class="d-block h1 mt-4">'. $site_name. '</span>' : get_logo()). $n.
 	'</a>'. $n.
 	'</div>';
 }
@@ -19,7 +19,7 @@ if ($recent_files)
 {
 	$aside .=
 	'<div id=category class="p-4">'. $n.
-	'<h5>'. $category. '</h5>'. $n.
+	'<h2 class=h5>'. $category. '</h2>'. $n.
 	'<ul class=list-unstyled>'. $nav. '</ul>'. $n.
 	'</div>';
 }
@@ -28,7 +28,7 @@ if ($use_recents && $recent_files)
 {
 	usort($recent_files, 'sort_time');
 
-	$aside .= '<div id=recents class="p-4"><h5>'. $recents. '</h5><ul class=list-unstyled>'. $n;
+	$aside .= '<div id=recents class="p-4"><h2 class=h5>'. $recents. '</h2><ul class=list-unstyled>'. $n;
 	$j = 0;
 	foreach($recent_files as $recents_name)
 	{
@@ -45,7 +45,7 @@ if ($glob_info_files || $dl || $use_contact && $mail_address)
 {
 	usort($glob_info_files, 'sort_time');
 
-	$aside .= '<div id=informations class="p-4"><h5>'. $informations. '</h5><ul class=list-unstyled>'. $n;
+	$aside .= '<div id=informations class="p-4"><h2 class=h5>'. $informations. '</h2><ul class=list-unstyled>'. $n;
 
 	foreach($glob_info_files as $info_files)
 	{
@@ -65,7 +65,7 @@ if ($glob_info_files || $dl || $use_contact && $mail_address)
 if ($address)
 	$aside .=
 	'<div id=address class="p-4">'. $n.
-	'<h5>'. ($address_title ? $address_title : $site_name). '</h5>'. $n.
+	'<h2 class=h5>'. ($address_title ? $address_title : $site_name). '</h2>'. $n.
 	'<p class="mx-3 wrap">'. $address. '</p>'. $n.
 	'</div>';
 
@@ -73,7 +73,7 @@ if ($use_popular_articles && $number_of_popular_articles > 0 &&$glob_all_counter
 {
 	$aside .=
 	'<div id=popular-articles class="p-4">'. $n.
-	'<h5>'. $popular_articles. '</h5><ul class=list-unstyled>'. $n;
+	'<h2 class=h5>'. $popular_articles. '</h2><ul class=list-unstyled>'. $n;
 
 	foreach($glob_all_counter_files as $all_counter_files)
 		$counter_sort[] = (int)trim(file_get_contents($all_counter_files)). $all_counter_files;
@@ -95,7 +95,7 @@ if ($use_comment && $number_of_new_comments > 0 && $glob_all_comment_files = glo
 
 	$aside .=
 	'<div id=recent-comments class="p-4">'. $n.
-	'<h5>'. $recent_comments. '</h5>';
+	'<h2 class=h5>'. $recent_comments. '</h2>';
 
 	$j = 0;
 	foreach($glob_all_comment_files as $all_comments)
