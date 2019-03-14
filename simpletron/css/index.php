@@ -39,7 +39,10 @@ if (filter_input(INPUT_SERVER, 'HTTP_IF_MODIFIED_SINCE') === $last_modified) hea
 echo $bootstrap, file_get_contents('magnific-popup.min.css'),'
 #address,#recents,#popular-articles,#recent-comments,#informations{width:15em}
 #informations{order:5}
+#kinaga{width:2.1em;vertical-align:text-top}
+#kinaga:hover{cursor:pointer;fill-opacity:.6}
 #page-top{bottom:1em;position:fixed;right:2em;display:none;z-index:10}
+#page-top svg{width:1em}
 .article{font-size:large;line-height:1.8}
 .article h1,.article h2,.article h3,.article h4,.article h5,.article h6,.current{margin-bottom:0;border-bottom:thin dotted}
 .badge-light{background-color:#f8f9fa}
@@ -70,8 +73,8 @@ a:hover img,a:hover svg,.social:hover{opacity:0.8}
 
 aside a{color:inherit;display:block;padding-top:1em}
 aside a:hover{color:inherit}
-aside h5,footer span.text-muted,#page-top{color:white!important}
-aside h5{border-bottom:thin solid white!important}
+aside h2,footer span.text-muted,#page-top{color:white!important}
+aside h2{border-bottom:thin solid white!important}
 
 body{color:#555}
 lastmod:before{color:lightskyblue;content:"\25F7\0020";font-size:large}
