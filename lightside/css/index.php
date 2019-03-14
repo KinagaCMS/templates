@@ -65,7 +65,7 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'), file_get_contents(
 .wrap,.mfp-title,.popover-body{word-wrap:break-word;white-space:pre-wrap}
 ::-moz-selection,.highlight,.comment:target{background-color:#d9edf7;color:#31708f}
 ::selection,.highlight,.comment:target{background-color:#d9edf7;color:#31708f}
-@media(max-width:767px){.card-columns{column-count:1}}
+@media(max-width:991px){.card-columns{column-count:1}}
 a:hover img,a:hover svg,.social:hover{opacity:0.8}
 aside a{color:inherit}
 aside div{border-top:1px solid rgba(0,0,0,.1);padding-top:2em}
