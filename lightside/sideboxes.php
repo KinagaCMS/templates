@@ -7,7 +7,7 @@ if ($recent_files || $glob_info_files)
 	$aside .=
 	'<div class="py-4 text-center">'. $n.
 	'<a href="'. $url. '">'. $n.
-	(!is_file('images/logo.png') ? '<img src="'. $url. 'images/icon.php" alt=logo width=250 height=200><span class="d-block h1 mt-4">'. $site_name. '</span>' : get_logo()). $n.
+	(!is_file('images/logo.png') ? '<img class=mt-3 src="'. $url. 'images/icon.php" alt=logo width=250 height=200><span class="d-block h1 mt-4">'. $site_name. '</span>' : get_logo()). $n.
 	'</a>'. $n.
 	'</div>';
 }
