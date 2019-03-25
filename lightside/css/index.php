@@ -68,8 +68,8 @@ echo $bootstrap, file_get_contents('magnific-popup.min.css'), file_get_contents(
 @media(max-width:991px){.card-columns{column-count:1}}
 a:hover img,a:hover svg,.social:hover{opacity:0.8}
 aside a{color:inherit}
-aside div{border-top:1px solid rgba(0,0,0,.1);padding-top:2em}
-body{color:#888}
+aside div:not(:first-child){border-top:1px solid rgba(0,0,0,.1);padding-top:2em}
+body{color:#555555}
 div{min-width:0}
 h1,h2,h3,h4,h5,h6{border-bottom:thin dotted;padding:.1em}
 lastmod:before{color:lightskyblue;content:"\25F7\0020";font-size:large}
