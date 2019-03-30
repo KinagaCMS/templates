@@ -11,9 +11,9 @@
 <div class=row>
 <div class="col-lg-8 pb-5 p-0">
 <ol class="breadcrumb rounded-0 bg-dark border-bottom border-black"><?=$breadcrumb?></ol>
-<div class=p-4><?=$article?></div>
+<div id=main class=p-4><?=$article?></div>
 </div>
-<aside class="col-lg-4 border-left border-black p-0"><?=$aside?></aside>
+<aside id=side class="col-lg-4 border-left border-black p-0"><?=$aside?></aside>
 </div>
 </div>
 <footer class="text-center p-4 border-top border-black">
