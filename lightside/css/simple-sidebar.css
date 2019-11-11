@@ -8,9 +8,9 @@ body {
 }
 
 #sidebar-wrapper {
-  margin-left: -41em;
+  margin-left: -31em;
   transition: margin .25s ease-out;
-  width:41em
+  width:31em
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -23,6 +23,6 @@ body {
   }
 
   #wrapper.toggled #sidebar-wrapper {
-    margin-left: -41em;
+    margin-left: -31em;
   }
 }

@@ -9,3 +9,11 @@
 3. 色を変更する場合は、/includes/lang/ja.php をテキストエディタで開き、$color = '紫'; などに変更して保存。
 
 4. また、文章内に daddyXX.gif を表示したい場合は、&lt;img src="&lt;?=$css?&gt;daddy12.gif" class="img-fluid" alt=""&gt; などと記述して下さい。
+
+## 謝辞
+
+- Bootstrap
+- jQuery
+- fancyBox
+- ふわふわ。り
+

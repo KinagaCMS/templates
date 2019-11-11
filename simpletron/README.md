@@ -11,3 +11,9 @@
 4. /images フォルダに header.jpg があれば、ジャンボトロンの背景画像として表示されます。
 
 5. /images フォルダに logo.png があれば、ジャンボトロンのサイト名がロゴに変わります。
+
+## 謝辞
+
+- Bootstrap
+- jQuery
+- fancyBox

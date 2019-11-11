@@ -9,3 +9,9 @@
 3. 色を変更する場合は、/includes/lang/ja.php をテキストエディタで開き、$color = '水'; などに変更して保存。
 
 4. また、/images フォルダに header.jpg があれば、ヘッダの背景画像として表示されます。
+
+##謝辞
+
+- Bootstrap
+- jQuery
+- fancyBox
