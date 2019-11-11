@@ -10,7 +10,7 @@
 
 4. また、/images フォルダに header.jpg があれば、ヘッダの背景画像として表示されます。
 
-##謝辞
+## 謝辞
 
 - Bootstrap
 - jQuery
