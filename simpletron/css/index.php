@@ -110,5 +110,5 @@ if ($color) echo '
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{background-color:'. hsla($color, 0, 0, .05). '}
 ::selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'. hsla($color). '}
 ::-moz-selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'. hsla($color). '}';
-if (is_file($header_jpg = '../../../images/header.jpg'))
+if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || is_file($header_jpg = '../../../images/header.jpg'))
 	echo 'header{background-image:url('. $header_jpg. ');background-repeat:no-repeat;background-size:cover;text-shadow:0px 0px 5px white}header a{color:'. ($color ? hsla($color, 0, -10) : 'inherit'). '}';
