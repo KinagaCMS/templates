@@ -112,6 +112,6 @@ if ($use_auto_wrap === true) echo '
 else echo '
 .page-top{padding-top:2rem!important;margin-bottom:2rem!important}';
 
-if (file_exists($header_jpg = '../../../images/header.jpg') && is_file($header_jpg)) echo'
+if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || file_exists($header_jpg = '../../../images/header.jpg') && is_file($header_jpg)) echo'
 body:before{background-image:url('. $header_jpg. ');background-repeat:no-repeat;background-size:cover;content:"";display:block;height:250px;width:100%}
 body:after{align-items:center;display:flex;font-size:large;background-color:rgba(0,0,0,.5);border-bottom:thin solid #222;content:"'. $meta_description. '";justify-content:center;text-shadow:0px 0px 5px white;position:relative;height:250px;left:0;position:absolute;top:0;width:100%}';
