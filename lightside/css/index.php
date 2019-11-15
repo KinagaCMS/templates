@@ -109,5 +109,5 @@ if ($color) echo '
 ::-moz-selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}';
 
 if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || is_file($header_jpg = '../../../images/header.jpg')) echo'
-body:before{background-image:url('. $header_jpg. ');background-repeat:no-repeat;background-size:cover;content:"";display:block;height:250px;width:100%}
+body:before{background-image:url('. r($header_jpg). ');background-repeat:no-repeat;background-size:cover;content:"";display:block;height:250px;width:100%}
 body:after{align-items:center;color:'. ($color ? hsla($color, -15, -15) : 'inherit'). ';display:flex;font-size:large;background-color:'. ($color ? hsla($color, 50, 50, .1) : 'rgba(0,0,0,.1)'). ';content:"'. $meta_description. '";justify-content:center;text-shadow:0px 0px 5px white;position:relative;height:250px;left:0;position:absolute;top:0;width:100%}';
