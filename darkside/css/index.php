@@ -47,6 +47,8 @@ aside a,::placeholder,label,.form-control,.form-control:focus{color:#fff!importa
 #page-top{bottom:1em;position:fixed;right:2em;display:none;z-index:10}
 #page-top svg{width:1em}
 .article{font-size:large;line-height:1.9}
+.article a:not(img){border-bottom:thin dotted}
+.article a:hover{border:none}
 .avatar{min-height:100px;min-width:100px;width:100px}
 .badge-light{background-color:#f8f9fa}
 .banned{filter:grayscale(100%);opacity:.8}
