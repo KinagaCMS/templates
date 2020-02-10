@@ -108,6 +108,15 @@ if ($color) echo '
 ::selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}
 ::-moz-selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}';
 
-if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || is_file($header_jpg = '../../../images/header.jpg')) echo'
-body:before{background-image:url('. r($header_jpg). ');background-repeat:no-repeat;background-size:cover;content:"";display:block;height:250px;width:100%}
-body:after{align-items:center;color:'. ($color ? hsla($color, -15, -15) : 'inherit'). ';display:flex;font-size:large;background-color:'. ($color ? hsla($color, 50, 50, .1) : 'rgba(0,0,0,.1)'). ';content:"'. $meta_description. '";justify-content:center;text-shadow:0px 0px 5px white;position:relative;height:250px;left:0;position:absolute;top:0;width:100%}';
+if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || is_file($header_jpg = '../../../images/header.jpg'))
+{
+	$header_jpg = r($header_jpg);
+	list($width, $height) = getimagesize($header_jpg);
+	echo'
+body:before{background-image:url('. $header_jpg. ');background-repeat:no-repeat;background-size:cover;content:"";display:block;height:'. $height. 'px;width:100%}
+body:after{align-items:center;color:white;display:flex;font-size:large;background-color:rgba(0,0,0,.2);content:"'. $meta_description. '";justify-content:center;text-shadow:0px 0px 5px white;position:relative;height:'. $height. 'px;left:0;position:absolute;top:0;width:100%}
+footer small.text-muted{color:white!important;text-shadow:0px 0px 4px white}
+#footer{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+footer{height:'. $height. 'px;overflow:hidden;position:relative}
+footer:after{bottom:0;background-image:url('. $header_jpg. ');background-position:bottom;background-repeat:no-repeat;background-size:cover;filter:brightness(.7) blur(5px);content:"";display:block;position:absolute;height:'. $height. 'px;width:100%;transform:scale(1.2);z-index:-1}';
+}
