@@ -47,8 +47,6 @@ aside a,::placeholder,label,.form-control,.form-control:focus{color:#fff!importa
 #page-top{bottom:1em;position:fixed;right:2em;display:none;z-index:10}
 #page-top svg{width:1em}
 .article{font-size:large;line-height:1.9}
-.article a:not(img){border-bottom:thin dotted}
-.article a:hover{border:none}
 .avatar{min-height:100px;min-width:100px;width:100px}
 .badge-light{background-color:#f8f9fa}
 .banned{filter:grayscale(100%);opacity:.8}
@@ -114,6 +112,15 @@ if ($use_auto_wrap === true) echo '
 else echo '
 .page-top{padding-top:2rem!important;margin-bottom:2rem!important}';
 
-if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || file_exists($header_jpg = '../../../images/header.jpg') && is_file($header_jpg)) echo'
-body:before{background-image:url('. r($header_jpg). ');background-repeat:no-repeat;background-size:cover;content:"";display:block;height:250px;width:100%}
-body:after{align-items:center;display:flex;font-size:large;background-color:rgba(0,0,0,.5);border-bottom:thin solid #222;content:"'. $meta_description. '";justify-content:center;text-shadow:0px 0px 5px white;position:relative;height:250px;left:0;position:absolute;top:0;width:100%}';
+if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || is_file($header_jpg = '../../../images/header.jpg'))
+{
+	$header_jpg = r($header_jpg);
+	list($width, $height) = getimagesize($header_jpg);
+	echo '
+body:before{background-image:url('. $header_jpg. ');background-repeat:no-repeat;background-size:cover;content:"";display:block;height:'. $height. 'px;width:100%}
+body:after{align-items:center;display:flex;font-size:large;background-color:rgba(0,0,0,.5);border-bottom:thin solid #222;content:"'. $meta_description. '";justify-content:center;text-shadow:0px 0px 5px white;position:relative;height:'. $height. 'px;left:0;position:absolute;top:0;width:100%}
+footer small.text-muted{color:white!important;text-shadow:0px 0px 4px white}
+#footer{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+footer{height:'. $height. 'px;overflow:hidden;position:relative}
+footer:after{bottom:0;background-image:url('. $header_jpg. ');background-position:bottom;background-repeat:no-repeat;background-size:cover;filter:brightness(.3) blur(5px);content:"";display:block;position:absolute;height:'. $height. 'px;width:100%;transform:scale(1.2);z-index:-1}';
+}
