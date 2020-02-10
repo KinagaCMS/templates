@@ -111,4 +111,4 @@ if ($color) echo '
 ::selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'. hsla($color). '}
 ::-moz-selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'. hsla($color). '}';
 if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || is_file($header_jpg = '../../../images/header.jpg'))
-	echo 'header{background-image:url('. r($header_jpg). ');background-repeat:no-repeat;background-size:cover;text-shadow:0px 0px 5px white}header a{color:'. ($color ? hsla($color, 0, -10) : 'inherit'). '}';
+	echo 'header{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('. r($header_jpg). ');background-repeat:no-repeat;background-size:cover}header,header a,header a:hover{color:white;text-shadow:0px 0px 5px white}';
