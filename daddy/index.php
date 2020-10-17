@@ -24,11 +24,10 @@
 <ol class="breadcrumb mb-3"><?=$breadcrumb?></ol>
 <div class="d-flex flex-column"><?=$aside?><div><?=$article?></div></div>
 </div>
-<footer class="text-center">
+<footer class="my-5">
 <a href="#TOP" id=page-top class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="currentColor" d="m2.5872 45.447-2.5872-2.043 24.034-40.851 23.966 40.987-2.996 1.362-21.038-35.745z"/></svg></a>
 <script src="<?=$js?>"></script>
 <?=$footer?>
-<a href="http://shimizumari.com/fuwa2li/" target="_blank" rel="noopener noreferrer" class="m-2"><img src="<?=$css?>fuwa_b20.gif" alt="fuwa_b20" height=31 width=31></a>
 </footer>
 </body>
 </html>
