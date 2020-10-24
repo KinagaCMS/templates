@@ -104,7 +104,6 @@ if ($color) echo 'div.container-fluid{color:'. hsla($color, -50, -50, .7). '}
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus{color:rgba(255, 255, 255, .9)}';
 if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || is_file($header_jpg = '../../../images/header.jpg'))
 {
-	$header_jpg = r($header_jpg);
 	list($width, $height) = getimagesize($header_jpg);
 	echo'
 body:before{background-image:url('. $header_jpg. ');background-position:bottom;background-repeat:no-repeat;background-size:cover;content:"";display:block;filter:brightness(.7);height:'. $height. 'px;width:100%}
