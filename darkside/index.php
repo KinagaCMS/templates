@@ -9,9 +9,9 @@
 <body id=TOP class="text-white bg-dark">
 <div class=container-fluid>
 <div class=row>
-<div class="col-lg-8 pb-5 p-0 border-black">
-<ol class="breadcrumb rounded-0 bg-dark border-black"><?=$breadcrumb?></ol>
-<div id=main class="p-4 border-bottom border-black"><?=$article?></div>
+<div id=main  class="col-lg-8 pb-5 p-0 border-black">
+<ol class="breadcrumb rounded-0 bg-dark border-black mb-0 border-bottom"><?=$breadcrumb?></ol>
+<div class="p-4 border-bottom border-black"><?=$article?></div>
 </div>
 <aside id=side class="col-lg-4 border-left border-black p-0 d-flex flex-column">
 <div class="py-4 text-center">

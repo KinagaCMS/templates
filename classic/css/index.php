@@ -1,10 +1,9 @@
 <?php
 include '../../../includes/functions.php';
 include '../../../includes/config.php';
-header('Last-Modified: '. $last_modified = timestamp(__FILE__));
-if (filter_input(INPUT_SERVER, 'HTTP_IF_MODIFIED_SINCE') === $last_modified) header('HTTP/1.1 304 Not Modified');
-header('Content-Type: text/css; charset='. $encoding);
+
 $bootstrap = file_get_contents('bootstrap.min.css');
+
 if ($color)
 {
 	#primary
@@ -32,15 +31,21 @@ if ($color)
 	#border
 	$bootstrap = str_replace(['#7abaff', '#80bdff', '#005cbf'], hsla($color, 0, 20), $bootstrap);
 }
+
+header('Content-Type: text/css; charset='. $encoding);
+header('Last-Modified: '. $last_modified = timestamp(__FILE__));
+
+if (filter_input(INPUT_SERVER, 'HTTP_IF_MODIFIED_SINCE') === $last_modified) header('HTTP/1.1 304 Not Modified');
+
 echo
 $bootstrap,
 file_get_contents('jquery.fancybox.min.css'), '
 #page-top{bottom:.8em;position:fixed;right:.8em;z-index:10}
 #page-top svg{width:1em}
 #page-top,#toc{display:none}
+#main header h1{margin-bottom:.5em;margin-top:.5em}
 .article{font-size:large;line-height:1.9}
 .categ-summary,.index-summary{line-height:1.7}
-.avatar{min-height:100px;min-width:100px;width:100px}
 .badge-light{background-color:#f8f9fa}
 .banned{filter:grayscale(100%);opacity:.8}
 .bg-danger.text-danger{background-color:#f2dede!important;color:#a94442!important}
@@ -50,7 +55,6 @@ file_get_contents('jquery.fancybox.min.css'), '
 .card-columns{column-count:2}
 .col-lg-9{min-width:0}
 .comment:target{box-shadow:5px 5px 5px 3px rgba(0,0,0,.2)}
-.comment-icon{background-color:'. ($color ? hsla($color, 5.5, -7,.9) : 'inherit'). '}
 .card-arrow:before{background-color:#fff;border-right:solid 1px rgba(0,0,0,.125);border-top:solid 1px rgba(0,0,0,.125);height:15px;transform:rotate(225deg);width:15px;content:"";display:block;left:117px;position:absolute;top:16px;z-index:1}
 .custom-file-label:after{content:"'. $custom_file_label. '"}
 .flow{color:dimgray;font-size:small;padding:0;list-style:none;counter-reset:num;margin-bottom:2em}
@@ -86,7 +90,7 @@ urlset:before{border-bottom:medium solid dimgray;margin:1em;text-align:center;fo
 url:hover{background-color:whitesmoke;color:darkgray}
 url{margin:1em auto;width:95%;display:block;font-size:small;padding:1em;overflow-wrap:break-word}
 lastmod{display:block;text-align:right;margin-top:1em;white-space:nowrap}
-@media(max-width:991px){input[type="search"]{margin-top:1em}.card-columns{column-count:1}#form .input-group-text{display:block}}';
+@media(max-width:991px){input[type="search"]{margin-top:1em}.card-columns{column-count:1}#form .input-group-text{display:block}}@media(max-width:767px){.index{flex-direction:column}.index div{width:100%!important}}';
 if ($use_auto_wrap) echo '
 .article,.card-text{word-wrap:break-word;white-space:pre-wrap}
 .article h1,.article h2,.article h3,.article h4,.article h5,.article h6{margin-bottom:0}

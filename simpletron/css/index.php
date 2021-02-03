@@ -97,7 +97,7 @@ url{margin:1em auto;width:95%;display:block;font-size:small;padding:1em;overflow
 lastmod{display:block;text-align:right;margin-top:1em;white-space:nowrap}
 #search{background-color:rgba(255,255,255,.5);text-align:center;margin:0 auto;transition:1s;width:40%}
 #search:hover,#search:focus{background-color:white}
-@media(max-width:767px){.card-columns{column-count:1}aside .w-25,#search{width:100%!important}#form .input-group-text{display:block}}';
+@media(max-width:767px){.index{flex-direction:column}.index div{width:100%!important}.card-columns{column-count:1}aside .w-25,#search{width:100%!important}#form .input-group-text{display:block}}';
 
 if ($use_auto_wrap === true) echo '
 .article,.card-text{word-wrap:break-word;white-space:pre-wrap}
@@ -111,4 +111,4 @@ if ($color) echo '
 ::selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'. hsla($color). '}
 ::-moz-selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'. hsla($color). '}';
 if (is_file($header_jpg = '../../../contents/'. basename(filter_input(INPUT_GET, 'categ', FILTER_SANITIZE_STRING)). '/header.jpg') || is_file($header_jpg = '../../../images/header.jpg'))
-	echo 'header{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('. $header_jpg. ');background-repeat:no-repeat;background-size:cover}header,header a,header a:hover{color:white;text-shadow:0px 0px 5px white}';
+	echo 'body>header{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('. $header_jpg. ');background-repeat:no-repeat;background-size:cover}body>header,body>header a,body>header a:hover{color:white;text-shadow:0px 0px 5px white}';

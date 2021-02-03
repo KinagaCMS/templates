@@ -51,6 +51,8 @@ file_get_contents('jquery.fancybox.min.css'), '
 .bg-success.text-success{background-color:#dff0d8!important;color:#3c763d!important}
 .bg-warning.text-warning{background-color:#fcf8e3!important;color:#8a6d3b!important}
 .card-columns{column-count:1}
+.col-lg-4{flex:0 0 100%!important;max-width:100%!important}
+.index{flex-direction:column}.index div{width:100%!important}
 .comment:target{box-shadow:5px 5px 5px 3px rgba(0,0,0,.2)}
 .comment-icon{background-color:'. ($color ? hsla($color, 5.5, -7,.9) : 'inherit'). '}
 .container{max-width:540px}

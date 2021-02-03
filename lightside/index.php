@@ -8,11 +8,11 @@
 </head>
 <body id=TOP>
 <div class="d-flex" id="wrapper">
-<aside id=sidebar-wrapper class="bg-light pb-5 d-flex flex-column">
+<aside id=side class="bg-light pb-5 d-flex flex-column">
 <div class="py-4 text-center">
 <a href="<?=$url?>"><?=!is_file('images/logo.png') ?'
-<img class=mt-3 src="'. $url. 'images/icon.php" alt=logo width=250 height=200>
-<span class="border-0 d-block h1 mt-4">'. $site_name. '</span>' : get_logo(true)?>
+<img class=my-3 src="'. $url. 'images/icon.php" alt=logo width=250 height=200>
+<h1 class=border-0>'. $site_name. '</h1>' : get_logo(true)?>
 </a>
 </div>
 <?=$use_search ? '
@@ -27,7 +27,7 @@
 <li class="d-md-none mr-3"><a class="badge badge-primary p-2" href="#top" onclick="$('#wrapper').toggleClass('toggled')">&#9664;&#9654;</a></li>
 <?=$breadcrumb?>
 </ol>
-<div class=p-4><?=$article?></div>
+<div id=main class="flex-grow-1 p-4"><?=$article?></div>
 </div>
 </div>
 <footer class="bg-light py-4">
