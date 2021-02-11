@@ -9,9 +9,9 @@
 <body id=TOP>
 <div class="d-flex" id="wrapper">
 <aside id=side class="bg-light pb-5 d-flex flex-column">
-<div class="py-4 text-center">
+<div class="py-4 px-sm-3 text-center">
 <a href="<?=$url?>"><?=!is_file('images/logo.png') ?'
-<img class=my-3 src="'. $url. 'images/icon.php" alt=logo width=250 height=200>
+<img class="my-3" src="'. $url. 'images/icon.php" alt=logo width=250 height=200>
 <h1 class=border-0>'. $site_name. '</h1>' : get_logo(true)?>
 </a>
 </div>
