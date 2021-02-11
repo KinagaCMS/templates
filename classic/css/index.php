@@ -98,7 +98,7 @@ if ($use_auto_wrap) echo '
 
 else echo '.page-top{padding-top:2rem!important;margin-bottom:2rem!important}';
 
-if ($color) echo 'div.container-fluid{color:'. hsla($color, -50, -50, .7). '}
+if ($color) echo '
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{background-color:'. hsla($color, 0, 0, .05). '}
 ::selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}
 ::-moz-selection, .highlight{background-color:'.hsla($color, 0, 0, .2).';color:'.hsla($color).'}
