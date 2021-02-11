@@ -56,7 +56,7 @@ aside a,::placeholder,label,.form-control,.form-control:focus{color:#fff!importa
 .bg-warning.text-warning{background-color:#fcf8e3!important;color:#8a6d3b!important}
 .border-black{border-color:#222!important}
 .card-columns{column-count:2}
-.card{background-color:#333}
+.card,.list-group-item{background-color:#333}
 .comment:target{box-shadow:5px 5px 5px 3px rgba(255,255,255,.05)}
 .comment-icon{background-color:'. ($color ? hsla($color, 5.5, -7,.9) : 'rgba(0,0,0,.5)'). '}
 .card-arrow:before{background-color:#333;border-right:solid 1px rgba(0,0,0,.125);border-top:solid 1px rgba(0,0,0,.125);height:15px;transform:rotate(225deg);width:15px;content:"";display:block;left:117px;position:absolute;top:16px;z-index:1}
