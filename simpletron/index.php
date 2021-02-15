@@ -16,12 +16,13 @@
 <?php if ($meta_description): ?><p class=mb-4><?=$meta_description?></p><?php endif?>
 <?php if ($search): ?><div class=mx-auto><?=$search?></div><?php endif?>
 </header>
-<div id=main class="container my-5"><?=$article?></div>
+<main id=main class="container my-5"><?=$article?></main>
+<ol class="breadcrumb mb-0 rounded-0 bg-light justify-content-center">
+<?=$breadcrumb?>
+</ol>
 <aside class="container-fluid d-flex flex-wrap flex-column flex-md-row align-items-start justify-content-between bg-primary text-white p-5"><?=$aside?></aside>
-<footer class="bg-primary py-4">
 <a href="#TOP" id=page-top class="btn btn-outline-primary bg-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8 3-7 9h5l2-3 2 3h5l-7-9z" fill="currentColor"/></svg></a>
 <script src="<?=$js?>"></script>
-<?=$footer?>
-</footer>
+<footer class=py-5><?=$footer?></footer>
 </body>
 </html>
