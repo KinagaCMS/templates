@@ -83,7 +83,7 @@ file_get_contents('jquery.fancybox.min.css'),'
 a:hover img,a:hover svg,.social:hover,img[alt=K]{opacity:.8}img[alt=K]:hover{opacity:1}
 aside a{color:inherit;display:block;padding:.5em}
 aside a:hover{color:inherit}
-aside h2,aside .blockquote-footer,footer small.text-muted,#page-top,aside label.input-group-text,aside .form-control[readonly]{color:white!important}
+aside h2,aside .blockquote-footer,#page-top,aside label.input-group-text,aside .form-control[readonly]{color:white!important}
 aside h2{border-bottom:thin solid white!important}
 aside a.bg-light:hover{background-color:inherit!important}
 aside #toc .h2{font-size:1.25rem;border:0}
