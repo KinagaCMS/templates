@@ -1,5 +1,6 @@
 <?php
-$sidebox_wrapper_class[0] = 'p-4';
+$use_info = true;
+$sidebox_wrapper_class[0] = 'p-4 border-black border-bottom';
 $sidebox_wrapper_class[1] = 'border-0';
 $sidebox_wrapper_class[2] = 'mb-5';
 foreach (range(0, 3) as $i) $sidebox_title_class[$i] = 'h5';
@@ -10,7 +11,7 @@ $sidebox_content_class[2] .= ' wrap';
 
 $article_nav_wrapper_class = 'd-flex border mt-5';
 $article_nav_next_href_class = 'flex-fill p-2 text-decoration-none w-50';
-$article_nav_prev_href_class = 'border-right '. $article_nav_next_href_class;
+$article_nav_prev_href_class = 'border-end '. $article_nav_next_href_class;
 $article_nav_xaquo_class = 'px-1 d-flex align-items-center bg-secondary text-white';
 $article_nav_title_class = 'd-block mb-1 text-secondary';
 $article_nav_content_class = 'd-block pb-3 px-3';
