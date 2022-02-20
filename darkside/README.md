@@ -13,5 +13,4 @@
 ## 謝辞
 
 - Bootstrap
-- jQuery
 - fancyBox
