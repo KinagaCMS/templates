@@ -8,12 +8,10 @@
 
 3. 色を変更する場合は、/includes/lang/ja.php をテキストエディタで開き、$color = '赤'; などに変更して保存。
 
-4. また、/images フォルダに header.jpg があれば、ヘッダの背景画像として表示されます。
-
+4. header または background の .jpg 及び .png に対応。参考： [主な使い方の解説](https://xn--5rwx17a.xn--v8jtdudb.com/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/%E4%B8%BB%E3%81%AA%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%AE%E8%A7%A3%E8%AA%AC#toc8)
 
 ## 謝辞
 
 - Bootstrap
-- jQuery
 - fancyBox
 - Start Bootstrap - Simple Sidebar
