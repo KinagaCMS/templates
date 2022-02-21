@@ -44,8 +44,6 @@ if ('ja' === $lang)
 $get_categ = !filter_has_var(INPUT_GET, 'categ') ? '' : filter_input(INPUT_GET, 'categ', FILTER_CALLBACK, ['options' => 'strip_tags_basename']);
 echo $bootstrap, file_get_contents('fancybox.css'), (!$color ? '' : ':root{--bs-primary-rgb:'. implode(',', hsl2rgb($h, $s, $l)). '}'), 'html{scroll-behavior:smooth}a{text-decoration:none}#page-top svg{bottom:1em;position:fixed;right:1em;transition:all .3s linear .3s}
 .not-found{background-image:url(daddy13.gif);background-repeat:no-repeat;background-position: 50% 100%;min-height:350px}
-#page-top{bottom:2em;position:fixed;right:2em;display:none;z-index:10}
-#page-top svg{width:1em}
 .article{font-size:large;line-height:1.9}
 .avatar{min-height:100px;min-width:100px;width:100px}
 .badge-light{background-color:#f8f9fa}
@@ -78,7 +76,6 @@ echo $bootstrap, file_get_contents('fancybox.css'), (!$color ? '' : ':root{--bs-
 .page-top{border-bottom:thin dotted;position:relative;text-decoration:none!important}
 .permit{left:.5em}
 .popover{max-width:70%}
-.popover-body{overflow:auto;max-height:200px}
 .similar-article{height:2rem}
 .sticky-top{top:10px}
 .text-light{color:'. ($color ? hsla($color, -5, +20, .9) : 'inherit'). ' !Important}
@@ -88,7 +85,6 @@ echo $bootstrap, file_get_contents('fancybox.css'), (!$color ? '' : ':root{--bs-
 ::selection,.highlight{background-color:#d9edf7;color:#31708f}
 a:hover img,a:hover svg,.social:hover,img[alt=K]{opacity:.8}img[alt=K]:hover{opacity:1}
 body{color:#555;letter-spacing:.4px}
-h1,h2,h3,h4,h5,h6{border-bottom:thin dotted;padding:.1em;overflow-wrap:break-word;margin-bottom:.5em}
 a,li,.title{overflow-wrap:break-word}
 label:not(.active),img[alt=K]{cursor:pointer}
 urlset{background-repeat: no-repeat; background:linear-gradient(to left,white,whitesmoke);color:dimgray}
