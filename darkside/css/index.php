@@ -49,12 +49,10 @@ $bootstrap,
 file_get_contents('fancybox.css'), (!$color ? '' : ':root{--bs-primary-rgb:'. implode(',', hsl2rgb($h, $s, $l)). '}'), 'html{scroll-behavior:smooth;text-decoration:none}
 aside .list-group *:not(input):not(label):not(.btn),aside .bg-primary{border:0}
 aside .list-group-item.bg-primary{font-size:1.25rem}
-
 body,aside a,::placeholder,.form-control,.form-control:focus,.nav-link.active,.bg-transparent{color:#fff!important}
 aside a.bg-light:hover,.img-thumbnail,.form-control[readonly],aside .bg-light.current,.page-link,::placeholder,.form-control,.form-control:focus,.nav-link.active{background-color:inherit!important}
 .bg-light,.accordion-item,.accordion-body{background-color:rgba(0,0,0,.05)!important}
-.card{background-color:#333}
-
+.card{background-color:#151A1F}
 #page-top svg{bottom:1em;position:fixed;right:1em;transition:all .3s linear .3s}
 .article{font-size:large;line-height:1.9}
 .avatar{min-height:100px;min-width:100px;width:100px}
@@ -65,7 +63,6 @@ aside a.bg-light:hover,.img-thumbnail,.form-control[readonly],aside .bg-light.cu
 .bg-success.text-success{background-color:#dff0d8!important;color:#3c763d!important}
 .bg-warning.text-warning{background-color:#fcf8e3!important;color:#8a6d3b!important}
 .border-black{border-color:#000!important}
-
 .comment:target{box-shadow:5px 5px 5px 3px rgba(255,255,255,.05)}
 .comment-icon{background-color:'. ($color ? hsla($color, 5.5, -7,.9) : 'rgba(0,0,0,.5)'). '}
 .card-arrow:before{background-color:#333;border-right:solid 1px rgba(0,0,0,.125);border-top:solid 1px rgba(0,0,0,.125);height:15px;transform:rotate(225deg);width:15px;content:"";display:block;left:117px;position:absolute;top:16px;z-index:1}
@@ -96,10 +93,10 @@ aside a.bg-light:hover,.img-thumbnail,.form-control[readonly],aside .bg-light.cu
 a,a:hover{text-decoration:none;color:white}
 a,li,.title{overflow-wrap:break-word}
 a:hover,a:hover img,a:hover svg,.social:hover,img[alt=K]{opacity:.8}img[alt=K]:hover{opacity:1}
-
 aside a:hover,aside a.active,.current{color:transparent;text-shadow:0px 0px 5px rgba(255,255,255,.5)}
 aside div:not(:first-child){border-top:1px solid #222}
 aside #toc .h2{font-size:1.25rem}
+h1,h2,h3:not(.popover-header),h4,h5,h6,.h1,.h2,.h3:not(b),.h4,.h5,.h6{font-family:'. $serif_fonts. 'serif;text-shadow:0 .05rem .04rem rgba(0,0,0,.3)}
 label:not(.active),img[alt=K]{cursor:pointer}
 div{min-width:0}
 pre{color:#ccc}
@@ -109,10 +106,8 @@ url:hover{background-color:whitesmoke;color:darkgray}
 url{margin:1em auto;width:95%;display:block;font-size:small;padding:1em;overflow-wrap:break-word}
 lastmod{display:block;text-align:right;margin-top:1em;white-space:nowrap}
 .page-item.active .page-link{border-color:white}
-
 ::selection,.highlight{background-color:'. ($color ? $c2 : 'white'). ';color:'. ($color ? $c : 'black'). '}
 ::-moz-selection,.highlight{background-color:'. ($color ? $c2 : 'white'). ';color:'. ($color ? $c : 'black'). '}';
-
 if ($use_auto_wrap === true) echo '
 .article,.card-text{word-wrap:break-word;white-space:pre-wrap}
 .article h1,.article h2,.article h3,.article h4,.article h5,.article h6{margin-bottom:0}
@@ -138,7 +133,7 @@ if (is_file($bg_img = '../../../contents/'. $get_categ. '/background.jpg')
 || is_file($bg_img = '../../../images/background.png')
 || is_file($bg_img = 'background.png'))
 {
-	echo '#TOP{position:relative}#TOP::after{background:url("'. $bg_img. '") center/cover no-repeat fixed;content:"";position:absolute;top:0;right:0;bottom:0;left:0;opacity:.35;z-index:-2}main.bg-light{--bs-bg-opacity:.5}';
+	echo '#main{position:relative}#main::after{background:url("'. $bg_img. '") center/cover no-repeat fixed;content:"";position:absolute;top:0;right:0;bottom:0;left:0;opacity:.35;z-index:-2}#main.bg-light{--bs-bg-opacity:.5}.card{background-color:rgba(var(--bs-dark-rgb),.5)}';
 }
 
 if ($bootstrap4) echo '
