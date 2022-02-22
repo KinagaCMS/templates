@@ -8,12 +8,14 @@
 
 3. 色を変更する場合は、/includes/lang/ja.php をテキストエディタで開き、$color = '緑'; などに変更して保存。
 
-4. /images フォルダに header.jpg があれば、ジャンボトロンの背景画像として表示されます。
+4. /images フォルダに logo.png があれば、ジャンボトロンのサイト名がロゴに変わります。
 
-5. /images フォルダに logo.png があれば、ジャンボトロンのサイト名がロゴに変わります。
+5. header.jpg または .png は、ジャンボトロンの背景画像として表示されます。
+
+6. background.jpg または .png は、コンテンツ部分の背景画像として表示されます。
+
 
 ## 謝辞
 
 - Bootstrap
-- jQuery
 - fancyBox

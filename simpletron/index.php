@@ -6,23 +6,25 @@
 <link href="<?=$css, ($get_categ ? '?categ='.$get_categ : '')?>" rel=stylesheet>
 <?=$header?>
 </head>
-<body id=TOP>
+<body id=TOP class=text-break>
 <nav class="justify-content-center navbar navbar-expand-lg navbar-dark bg-primary rounded-0">
-<button class=navbar-toggler data-toggle=collapse data-target="#nav" aria-controls=nav aria-expanded=false accesskey=n tabindex=100><span class=navbar-toggler-icon></span></button>
-<ul class="justify-content-center navbar-nav collapse navbar-collapse" id=nav><?=$nav?></ul>
+<button class=navbar-toggler data-bs-toggle=collapse data-bs-target="#nav" aria-controls=nav aria-expanded=false accesskey=n tabindex=100><span class=navbar-toggler-icon></span></button>
+<ul id=nav class="justify-content-center navbar-nav collapse navbar-collapse"><?=$nav?></ul>
 </nav>
-<header class="jumbotron mh-100 text-center rounded-0 mb-0">
-<h1 class="display-4 mb-4"><a href="<?=$url?>"><?=get_logo()?></a></h1>
-<?php if ($meta_description): ?><p class=mb-4><?=$meta_description?></p><?php endif?>
-<?php if ($search): ?><div class=mx-auto><?=$search?></div><?php endif?>
+<header id=header class="jumbotron mh-100 text-center rounded-0 mb-0 py-5 bg-light">
+<h1 class=display-4><a href="<?=$url?>"><?=get_logo()?></a></h1>
+<?php if ($meta_description): ?><p class=m-4><?=$meta_description?></p><?php endif?>
+<?php if ($search): ?><div class="mx-auto px-5"><?=$search?></div><?php endif?>
 </header>
-<main id=main class="container my-5"><?=$article?></main>
-<ol class="breadcrumb mb-0 rounded-0 bg-light justify-content-center">
+<main id=main class="container py-3"><?=$article?></main>
+<ol class="breadcrumb mb-0 rounded-0 bg-light justify-content-center py-3">
 <?=$breadcrumb?>
 </ol>
-<aside class="container-fluid d-flex flex-wrap flex-column flex-md-row align-items-start justify-content-between bg-primary text-white p-5"><?=$aside?></aside>
-<a href="#TOP" id=page-top class="btn btn-outline-primary bg-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8 3-7 9h5l2-3 2 3h5l-7-9z" fill="currentColor"/></svg></a>
+<aside id=side class="container-fluid d-flex flex-wrap flex-column flex-md-row align-items-start justify-content-between bg-primary text-white p-5"><?=$aside?></aside>
+<footer id=footer class="bg-dark py-5">
+<a href="#TOP" id=page-top><svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" stroke="white" fill="var(--bs-primary)" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16"><path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/></svg></a>
 <script src="<?=$js?>"></script>
-<footer class=py-5><?=$footer?></footer>
+<?=$footer?>
+</footer>
 </body>
 </html>
