@@ -1,4 +1,5 @@
 <?php
+$use_info = true;
 $sidebox_wrapper_class[0] = 'p-4';
 $sidebox_wrapper_class[1] = 'border-0';
 $sidebox_wrapper_class[2] = 'mb-5';
