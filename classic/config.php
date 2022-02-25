@@ -14,11 +14,11 @@ $article_nav_content_class = 'd-block pb-3 px-3';
 
 $sidebox_wrapper_class = ['list-group mb-5', 'list-group-item collapse show ps-0 pe-3', 'list-group mb-5 w-100'];
 $sidebox_title_class = [
-	'list-group-item bg-primary title', #sidebox 1
-	'list-group-item list-group-item-primary title', #sidebox 2
-	'list-group-item bg-success title', # login success
-	'list-group-item bg-danger title', #login error
-	'list-group-item bg-info navbar-dark d-flex align-items-center justify-content-between py-2 title', #toc
+	'list-group-item bg-primary text-white', #sidebox 1
+	'list-group-item bg-secondary text-white', #sidebox 2
+	'list-group-item bg-success text-white', # login success
+	'list-group-item bg-danger text-white', #login error
+	'list-group-item bg-info navbar-dark d-flex align-items-center justify-content-between py-2 text-white', #toc
 	];
 $sidebox_content_class = [
 	'list-group-item list-group-item-action',

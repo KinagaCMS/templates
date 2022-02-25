@@ -19,11 +19,11 @@
 </div>
 </div>
 </nav>
-<ol class="breadcrumb rounded-0 justify-content-end mb-0 p-2"><?=$breadcrumb?></ol>
+<ol class="breadcrumb rounded-0 justify-content-end mb-4 p-2"><?=$breadcrumb?></ol>
 <div class=container-fluid>
 <div class=row>
-<div id=main class="col-lg-9 p-5"><?=$article?></div>
-<div id=side class="col-lg-3 d-flex flex-column my-5"><?=$aside?></div>
+<div id=main class="col-lg-9"><?=$article?></div>
+<div id=side class="col-lg-3 d-flex flex-column"><?=$aside?></div>
 </div>
 </div>
 <footer id=footer class="py-3">
