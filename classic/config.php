@@ -2,6 +2,7 @@
 
 #$copyright = 'Designed by <a href="https://example.com/">exampleDesign</a>';
 
+$use_info = true;
 $categ_nav_class = '';
 $h1_title[0] = 'm-0 mb-5 p-0';
 $article_wrapper_class = 'mb-2 px-2';
