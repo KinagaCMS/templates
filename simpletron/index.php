@@ -12,11 +12,11 @@
 <ul id=nav class="justify-content-center navbar-nav collapse navbar-collapse"><?=$nav?></ul>
 </nav>
 <header id=header class="jumbotron mh-100 text-center rounded-0 mb-0 py-5 bg-light">
-<h1 class=display-4><a href="<?=$url?>"><?=get_logo()?></a></h1>
-<?php if ($meta_description): ?><p class=m-4><?=$meta_description?></p><?php endif?>
-<?php if ($search): ?><div class="mx-auto px-5"><?=$search?></div><?php endif?>
+<h1 class="display-4 mb-4"><a href="<?=$url?>"><?=get_logo()?></a></h1>
+<?php if ($meta_description): ?><div class=mb-4><?=$meta_description?></div><?php endif;
+if ($search) echo $search?>
 </header>
-<div id=bg class="m-0 p-0"><main id=main class="container py-3"><?=$article?></main></div>
+<div id=bg class="m-0 p-0"><main id=main class="container py-5"><?=$article?></main></div>
 <ol class="breadcrumb mb-0 rounded-0 bg-light justify-content-center py-3">
 <?=$breadcrumb?>
 </ol>
