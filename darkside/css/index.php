@@ -49,6 +49,7 @@ if ($get_categ = !filter_has_var(INPUT_GET, 'categ') ? '' : filter_input(INPUT_G
 	else
 		$meta_description = $get_categ;
 }
+elseif ($subtitle) $meta_description = $subtitle;
 echo
 $bootstrap,
 file_get_contents('fancybox.css'),
