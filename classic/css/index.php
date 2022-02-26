@@ -47,6 +47,7 @@ if ($get_categ = !filter_has_var(INPUT_GET, 'categ') ? '' : filter_input(INPUT_G
 	else
 		$meta_description = $get_categ;
 }
+elseif ($subtitle) $meta_description = $subtitle;
 echo
 $bootstrap,
 file_get_contents('fancybox.css'),
@@ -74,7 +75,7 @@ html{scroll-behavior:smooth}
 .flow li.active{color:limegreen}
 .flow li.active:before{border-color:limegreen}
 .img-responsive{display:block;max-width:100%;height:auto}
-.lock{width:.6em;height:.7em;margin-left:.2em;background-image:url(\'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="'. ($color ? hsla($color) : 'dimgray'). '" viewBox="0 0 4 5"%3E%3Cpath d="m0.2422 1.7224v0.0608c-0.138 0.0285-0.2422 0.1489-0.2422 0.2931v2.6248c0.000005 0.1658 0.1357 0.2989 0.3047 0.2989h3.3906c0.169 0 0.3047-0.13409 0.3047-0.29889v-2.6248c0-0.1442-0.1042-0.26466-0.2422-0.2931v-0.0608c0-0.95055-0.7888-1.7224-1.7578-1.7224-0.969 0.0000052-1.7578 0.77186-1.7578 1.7224zm1.7578-1.1227c0.631 0 1.1465 0.50276 1.1465 1.1227v0.053149h-2.293v-0.053051c0.00002-0.61995 0.5145-1.1228 1.1465-1.1228zm0 2.0974h0.00195c0.237 0 0.42969 0.18709 0.42969 0.41958 0 0.12066-0.052766 0.23003-0.13477 0.30654l0.11523 0.59584c0.006 0.033352-0.014828 0.059393-0.048828 0.059393h-0.7149c-0.034 0-0.056781-0.026041-0.050781-0.059393l0.11328-0.59201c-0.086-0.076513-0.14062-0.18678-0.14062-0.31038 0-0.23248 0.1927-0.41955 0.4297-0.41955z"%2F%3E%3C%2Fsvg%3E\');background-repeat:no-repeat}
+.lock{width:.6em;height:.7em;margin-left:.2em;background-image:url(\'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="'. ($color ? $c : 'dimgray'). '" viewBox="0 0 4 5"%3E%3Cpath d="m0.2422 1.7224v0.0608c-0.138 0.0285-0.2422 0.1489-0.2422 0.2931v2.6248c0.000005 0.1658 0.1357 0.2989 0.3047 0.2989h3.3906c0.169 0 0.3047-0.13409 0.3047-0.29889v-2.6248c0-0.1442-0.1042-0.26466-0.2422-0.2931v-0.0608c0-0.95055-0.7888-1.7224-1.7578-1.7224-0.969 0.0000052-1.7578 0.77186-1.7578 1.7224zm1.7578-1.1227c0.631 0 1.1465 0.50276 1.1465 1.1227v0.053149h-2.293v-0.053051c0.00002-0.61995 0.5145-1.1228 1.1465-1.1228zm0 2.0974h0.00195c0.237 0 0.42969 0.18709 0.42969 0.41958 0 0.12066-0.052766 0.23003-0.13477 0.30654l0.11523 0.59584c0.006 0.033352-0.014828 0.059393-0.048828 0.059393h-0.7149c-0.034 0-0.056781-0.026041-0.050781-0.059393l0.11328-0.59201c-0.086-0.076513-0.14062-0.18678-0.14062-0.31038 0-0.23248 0.1927-0.41955 0.4297-0.41955z"%2F%3E%3C%2Fsvg%3E\');background-repeat:no-repeat}
 .nowrap{white-space:normal}
 .page-top:after{content:"'. $pagetop. '";position:absolute;opacity:0;right:-2em}
 .page-top:hover:after{opacity:1;right:0;transition:.3s linear}
@@ -117,7 +118,7 @@ if (is_file($header_img = '../../../contents/'. $get_categ. '/header.jpg')
 || is_file($header_img = '../../../images/header.jpg') || is_file($header_img = 'header.jpg')
 || is_file($header_img = '../../../images/header.png') || is_file($header_img = 'header.png'))
 {
-	if (list (, $height) = getimagesize($header_img))
+	if (list(, $height) = getimagesize($header_img))
 	{
 		echo 'body:before{background-image:url('. $header_img. ');background-position:bottom;background-repeat:no-repeat;background-size:cover;content:"";display:block;height:'. $height. 'px;width:100%}';
 		if ($meta_description) echo 'body:before{filter:brightness(.7)}body:after{align-items:center;color:white;display:flex;font-size:large;content:"'. $meta_description. '";justify-content:center;text-shadow:0px 0px 5px white;letter-spacing:.15em;position:relative;height:100px;left:0;position:absolute;top:0;height:'. $height. 'px;width:100%;word-wrap:break-word;white-space:pre-wrap}';
