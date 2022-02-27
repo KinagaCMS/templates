@@ -16,15 +16,16 @@
 <aside id=side class="col-lg-4 border-start border-black p-0 d-flex flex-column">
 <div class="py-4 text-center">
 <a href="<?=$url?>"><?php get_logo(); echo !$logo_found ?
-'<img class=my-3 src="'. $url. 'images/icon.php" alt=logo width=250 height=200><span class="border-0 d-block h1">'. $site_name. '</span>' : get_logo(true,'d-block display-6 my-3', 250)?>
+'<img class=my-3 src="'. $url. 'images/icon.php" alt=logo width=250 height=200><span class="d-block h1">'. $site_name. '</span>' : get_logo(true, 'd-block h1', 250)?>
 </a>
 </div>
-<?=$use_search ?
-'<div class="d-block p-5 border-black border-bottom">'. $search. '</div>' : '', $nav ?
+<?=!$use_search ? '' : '<div class="d-block p-5 border-black border-bottom">'. $search. '</div>',
+!$nav ? '' :
 '<div id=category class="p-4 order-'. $sidebox_order[10]. '">'. $n.
 '<h2 class=h5>'. $sidebox_title[10]. '</h2>'. $n.
 '<ul class=list-unstyled>'. $nav. '</ul>'. $n.
-'</div>' : '', $aside?>
+'</div>',
+$aside?>
 </aside>
 </div>
 </div>
