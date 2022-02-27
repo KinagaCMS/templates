@@ -9,7 +9,7 @@
 <body id=TOP class=text-break>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary title">
 <div class="container-fluid">
-<a class=navbar-brand href="<?=$url?>"><?=get_logo()?></a>
+<a class=navbar-brand href="<?=$url?>"><?=get_logo(true, 'ms-2', 50)?></a>
 <button class=navbar-toggler type=button data-toggle=collapse data-target="#nav" accesskey=n tabindex=-1>
 <span class=navbar-toggler-icon></span>
 </button>
