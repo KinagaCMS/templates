@@ -55,10 +55,10 @@ $bootstrap,
 file_get_contents('fancybox.css'),
 (!$color ? '' : ':root{--bs-primary-rgb:'. implode(',', hsl2rgb($h, $s, $l)). '}'),
 'html{scroll-behavior:smooth}
-aside .list-group *:not(input):not(label):not(.btn),aside .bg-primary{border:0}
-aside .list-group-item.bg-primary{font-size:1.25rem}
-body,aside a,::placeholder,.form-control,.form-control:focus,.nav-link.active,.bg-transparent{color:#fff!important}
-aside a.bg-light:hover,.img-thumbnail,.form-control[readonly],aside .bg-light.current,.page-link,::placeholder,.form-control,.form-control:focus,.nav-link.active{background-color:inherit!important}
+#side .list-group *:not(input):not(label):not(.btn),#side .bg-primary{border:0}
+#side .list-group-item.bg-primary{font-size:1.25rem}
+body,#side a,::placeholder,.form-control,.form-control:focus,.nav-link.active,.bg-transparent{color:#fff!important}
+#side a.bg-light:hover,.img-thumbnail,.form-control[readonly],#side .bg-light.current,.page-link,::placeholder,.form-control,.form-control:focus,.nav-link.active{background-color:inherit!important}
 .bg-light,.accordion-item,.accordion-body{background-color:rgba(0,0,0,.05)!important}
 .card{background-color:#151A1F}
 #page-top svg{bottom:1em;position:fixed;right:1em;transition:all .3s linear .3s}
@@ -73,11 +73,11 @@ aside a.bg-light:hover,.img-thumbnail,.form-control[readonly],aside .bg-light.cu
 .border-black{border-color:#000!important}
 .comment:target{box-shadow:5px 5px 5px 3px rgba(255,255,255,.05)}
 .comment-icon{background-color:'. ($color ? hsla($color, 5.5, -7,.9) : 'rgba(0,0,0,.5)'). '}
-.card-arrow:before{background-color:#333;border-right:solid 1px rgba(0,0,0,.125);border-top:solid 1px rgba(0,0,0,.125);height:15px;transform:rotate(225deg);width:15px;content:"";display:block;left:117px;position:absolute;top:16px;z-index:1}
+.card-arrow:before{background-color:#151A1F;border-right:solid 1px rgba(0,0,0,.125);border-top:solid 1px rgba(0,0,0,.125);height:15px;transform:rotate(225deg);width:15px;content:"";display:block;left:117px;position:absolute;top:16px;z-index:1}
 .custom-file-label:after{content:"'. $custom_file_label. '"}
 .flow{color:dimgray;font-size:small;padding:0;list-style:none;counter-reset:num;margin-bottom:2em}
 .flow li{overflow-wrap:break-word;width:25%;float:left;position:relative;text-align:center;padding:0 1em}
-.flow li:before{counter-increment:num;content:counter(num,upper-roman);height:30px;width:30px;line-height:30px;border:thin solid lightgray;display:block;margin:0 auto 10px auto;border-radius:50%;background-color:white}
+.flow li:before{counter-increment:num;content:counter(num,upper-roman);height:30px;width:30px;line-height:30px;border:thin solid lightgray;display:block;margin:0 auto 10px auto;border-radius:50%;background-color:#fff}
 .flow li:after{content:"";position:absolute;width:100%;height:1px;background-color:lightgray;top:15px;left:-55%;z-index:-1}
 .flow li:first-child:after{content:none}
 .flow li.active{color:limegreen}
@@ -92,18 +92,17 @@ aside a.bg-light:hover,.img-thumbnail,.form-control[readonly],aside .bg-light.cu
 .page-top:not(:hover):after{opacity:0;transition:.3s}
 .page-top{clear:both;border-bottom:thin dotted;position:relative;text-decoration:none!important}
 .permit{left:.5em}
-.popover{max-width:70%;color:#333}
+.popover{max-width:70%;color:#151A1F}
 .similar-article{height:2rem}
 .sticky-top{top:10px}
 .text-light{color:'. ($color ? hsla($color, -5, 20, .9) : 'inherit'). ' !Important}
 .wrap,.popover-body{word-wrap:break-word;white-space:pre-wrap}
 @media(max-width:767px){#form .input-group-text{display:block}}
-a,a:hover{text-decoration:none;color:white}
-a,li,.title{overflow-wrap:break-word}
-a:hover,a:hover img,a:hover svg,.social:hover,img[alt=K]{opacity:.8}img[alt=K]:hover{opacity:1}
-aside a:hover,aside a.active,.current{color:transparent;text-shadow:0px 0px 5px rgba(255,255,255,.5)}
-aside div:not(:first-child){border-top:1px solid #222}
-aside #toc .h2{font-size:1.25rem}
+a,a:hover{text-decoration:none;color:#fff}
+a:hover,a:hover img,a:hover svg,.social:hover,img[alt=K]{opacity:.85}img[alt=K]:hover{opacity:1}
+#side a:hover,#side a.active,.current{color:transparent;text-shadow:0px 0px 5px rgba(255,255,255,.5)}
+#side div:not(:first-child){border-top:1px solid #151A1F}
+#side #toc .h2{font-size:1.25rem}
 h1,h2,h3:not(.popover-header),h4,h5,h6,.h1,.h2,.h3:not(b),.h4,.h5,.h6{font-family:'. $serif_fonts. 'serif;text-shadow:0 .05rem .04rem rgba(0,0,0,.3)}
 label:not(.active),img[alt=K]{cursor:pointer}
 div{min-width:0}
@@ -113,7 +112,7 @@ urlset:before{border-bottom:medium solid dimgray;margin:1em;text-align:center;fo
 url:hover{background-color:whitesmoke;color:darkgray}
 url{margin:1em auto;width:95%;display:block;font-size:small;padding:1em;overflow-wrap:break-word}
 lastmod{display:block;text-align:right;margin-top:1em;white-space:nowrap}
-.page-item.active .page-link{border-color:white}
+.page-item.active .page-link{border-color:#fff}
 ::selection,.highlight{background-color:'. ($color ? $c2 : 'white'). ';color:'. ($color ? $c : 'black'). '}
 ::-moz-selection,.highlight{background-color:'. ($color ? $c2 : 'white'). ';color:'. ($color ? $c : 'black'). '}';
 if ($use_auto_wrap) echo '
