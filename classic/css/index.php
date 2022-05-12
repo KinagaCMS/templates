@@ -112,7 +112,7 @@ if (is_file($header_img = '../../../contents/'. $get_categ. '/header.jpg')
 {
 	if (list(, $height) = getimagesize($header_img))
 	{
-		echo 'body:before{background-image:url('. $header_img. ');background-position:bottom;background-repeat:no-repeat;background-size:cover;content:"";display:block;height:'. $height. 'px;width:100%}';
+		echo 'body:before{background-image:url("'. $header_img. '");background-position:bottom;background-repeat:no-repeat;background-size:cover;content:"";display:block;height:'. $height. 'px;width:100%}';
 		if ($meta_description) echo 'body:before{filter:brightness(.7)}body:after{align-items:center;color:white;display:flex;font-size:large;content:"'. $meta_description. '";justify-content:center;text-shadow:0px 0px 5px white;letter-spacing:.15em;position:relative;height:100px;left:0;position:absolute;top:0;height:'. $height. 'px;width:100%;word-wrap:break-word;white-space:pre-wrap}';
 	}
 }
