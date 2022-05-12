@@ -110,7 +110,7 @@ if (is_file($header_img = '../../../contents/'. $get_categ. '/header.jpg')
 || is_file($header_img = '../../../images/header.jpg') || is_file($header_img = 'header.jpg')
 || is_file($header_img = '../../../images/header.png') || is_file($header_img = 'header.png'))
 {
-	if (list (, $height) = getimagesize($header_img)) echo '#header{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('. $header_img. ');background-repeat:no-repeat;background-size:cover}#header,#header a,#header a:hover{color:white;text-shadow:0px 0px 5px white}';
+	if (list (, $height) = getimagesize($header_img)) echo '#header{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url("'. $header_img. '");background-repeat:no-repeat;background-size:cover}#header,#header a,#header a:hover{color:white;text-shadow:0px 0px 5px white}';
 }
 if (is_file($bg_img = '../../../contents/'. $get_categ. '/background.jpg')
 || is_file($bg_img = '../../../contents/'. $get_categ. '/background.png')
