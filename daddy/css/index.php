@@ -43,7 +43,7 @@ if ('ja' === $lang)
 }
 $get_categ = !filter_has_var(INPUT_GET, 'categ') ? '' : filter_input(INPUT_GET, 'categ', FILTER_CALLBACK, ['options' => 'strip_tags_basename']);
 echo $bootstrap, file_get_contents('fancybox.css'), (!$color ? '' : ':root{--bs-primary-rgb:'. implode(',', hsl2rgb($h, $s, $l)). '}'), 'html{scroll-behavior:smooth}a{text-decoration:none}#page-top svg{bottom:1em;position:fixed;right:1em;transition:all .3s linear .3s}
-.not-found{background-image:url(daddy13.gif);background-repeat:no-repeat;background-position: 50% 100%;min-height:350px}
+.not-found{background-image:url("daddy13.gif");background-repeat:no-repeat;background-position: 50% 100%;min-height:350px}
 .article{font-size:large;line-height:1.9}
 .avatar{min-height:100px;min-width:100px;width:100px}
 .badge-light{background-color:#f8f9fa}
